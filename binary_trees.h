@@ -21,13 +21,13 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 };
 
-// Basic Binary Tree
+/* Basic Binary Tree */
 typedef struct binary_tree_s binary_tree_t;
-// Binary Search Tree
+/* Binary Search Tree */
 typedef struct binary_tree_s bst_t;
-// AVL Tree
+/* AVL Tree */
 typedef struct binary_tree_s avl_t;
-// Max Binary Heap
+/* Max Binary Heap */
 typedef struct binary_tree_s heap_t;
 
 /*  linked list for advanced 101 the levelorder */
@@ -45,12 +45,16 @@ typedef struct link_s
 	struct link_s *next;
 } link_t;
 
-// New node
+/* New node */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
-// Insert left
+/* Insert left */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
-// Insert right
+/* Insert right */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+/* print fuction */
+void binary_tree_print(const binary_tree_t *);
+
+
 void binary_tree_delete(binary_tree_t *tree);
 int binary_tree_is_leaf(const binary_tree_t *node);
 int binary_tree_is_root(const binary_tree_t *node);
@@ -68,7 +72,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
-// Lowest common ancestor
+/* Lowest common ancestor */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
